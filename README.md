@@ -1,2 +1,2 @@
 # angular-dbserver
-Treinamento de angularjs básico .
+Treinamento de angularjs básico usando nodejs.
