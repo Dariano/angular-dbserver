@@ -1,0 +1,29 @@
+<div class="page-header text-center">
+	<h1>{{userCtrl.user.name}}</h1>
+	<form name="formulario" class="row" ng-submit="userCtrl.salvar(userCtrl.user)">
+		<div class="col-md-12">
+			<div class="form-group">
+				<label>Nome</label>
+				<input type="text" required ng-model="userCtrl.user.name">
+			</div>
+
+			<div class="form-group">
+				<label> Sobrenome</label>
+				<input type="text" ng-model="userCtrl.user.lastName">
+			</div>
+
+			<div class="form-group">
+				<label>URL da Foto</label>
+				<input type="text" ng-model="userCtrl.user.photoUrl">
+			</div>
+
+			<button type="submit" class="btn btn-primary">Salvar</button>
+			<a href="#/" class="btn btn-primary">Voltar</a>
+		</div>
+
+		<div class="col-md-12" ng-hide="!userCtrl.user.photoUrl">
+			<hr>
+			<img src="{{userCtrl.user.photoUrl}}" height="20%" width="20%" alt="" class="img-responsive center-block">
+		</div>		
+	</form>
+</div>

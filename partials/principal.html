@@ -1,0 +1,22 @@
+<div class="jumbotron">
+	<h1 class="text-center">Controle de Usuários</h1>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<form>
+			<div class="input-group-btn">
+				<span class="input-group-btn">
+					<a href="#/usuario/create" class="btn btn-primary">Novo usuário</a>
+				</span>
+			</div>
+			<input class="form-control" ng-model="filtro" placeholder="filtrar pelo nome">
+		</form>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<meu-painel ng-repeat="user in users| orderBy: 'name'" titulo="{{user.name}} {{user.lastName}}">
+				<img class="img-responsive center-block" src="{{user.photoUrl}}" ng-if="!!user.photoUrl">
+		</meu-painel>
+	</div>
+</div>
